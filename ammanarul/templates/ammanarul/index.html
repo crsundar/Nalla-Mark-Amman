@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+	<div class="row">
+	    <div class="col-sm-3">
+			{% include 'nav.html' %}
+	        <hr class="hidden-sm hidden-md hidden-lg">
+	    </div>
+	    <div class="col-sm-6">
+		    <img src="{% static 'ammanarul/amman.jpg' %}" class="mx-auto d-block" width="360">
+			<h3 style="text-align:center; color:red">All your desires will be fulfilled</h3> 
+			<h4 style="text-align:center; color:green">Want to send a Prayer?</h4>
+			<h4 style="text-align:center; color:blue"><a href="{% url 'choices' %}">Click here</a></h4> 
+	    </div>
+	    <div class="col-sm-3">
+	    	<img src="{% static 'ammanarul/undiyal.jpg' %}" class="mx-auto d-block" width="180">
+	        <p style="text-align:center;color: red">Donate in the Undiyal of<br>NALLA MARK AMMAN</p>
+	        <div class="btn-group ml-5">
+			    <a href="#" class="btn btn-primary btn-sm" role="button">&#8377 100</a>
+			    <a href="#" class="btn btn-primary btn-sm" role="button">&#8377 500</a>
+			    <a href="#" class="btn btn-primary btn-sm" role="button">&#8377 1000</a>
+			</div>
+	    </div>
+	</div>
+{% endblock %}

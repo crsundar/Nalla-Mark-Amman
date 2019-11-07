@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+	{% include 'topnav.html' %}   
+	<h2>Special Prayers</h2>
+	<ul>
+		{% for special in special %}
+		  	<table class="table table-bordered align=center"> 
+				<tr>
+				    <th rowspan="3"><img src="{{ special.profile.url}}" alt="{{ special.title }}"style="width:100px;height:100px;border-radius:50%;"></th>
+				    <td><b>Name: {{ special.name }}</b></td><td><b>Prayer Date:  </b>{{ special.created_on | date:"d M Y" }}</td>
+				</tr>
+				<tr>
+				    <td>{{ special.town }}, {{ special.city }}, {{ special.state }}</td><td><b>Display upto: </b>{{ special.display_upto | date:"d M Y" }}</td>
+				</tr>
+				<tr>
+					
+				</tr>			
+				<tr>
+				    <td colspan="3"><h5>Prayer: <br>{{ special.prayer }}</h5></td>
+				</tr>
+			</table>
+			<hr>
+		{% endfor %}
+	</ul>
+{% endblock %}

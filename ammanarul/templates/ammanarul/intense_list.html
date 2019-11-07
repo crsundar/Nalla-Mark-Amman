@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+	{% include 'topnav.html' %}	   
+	<h2>Intense Prayers</h2>
+	<ul>
+		{% for intense in intense %}
+		  	<table class="table table-bordered align=center"> 
+				<tr>
+				    <th rowspan="3"><img src="{{ intense.profile.url}}" alt="{{ post.title }}"style="width:100px;height:100px;border-radius:50%;"></th>
+				    <td><b>Name: {{ intense.name }}</b></td><td><b>Prayer Date:  </b>{{ intense.created_on | date:"d M Y" }}</td>
+				</tr>
+				<tr>
+				    <td>{{ intense.town }}, {{ intense.city }}, {{ intens.state }}</td><td><b>Display upto: </b>{{ intense.display_upto | date:"d M Y" }}</td>
+				</tr>
+				<tr>
+					
+				</tr>			
+				<tr>
+				    <td colspan="3"><h5>Prayer: <br>{{ intense.prayer }}</h5></td>
+				</tr>
+			</table>
+			<hr>
+		{% endfor %}
+	</ul>
+{% endblock %}

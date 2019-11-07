@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'head.html' %}
+</head>
+<body>  
+    <div class="container">
+        <div id="top">
+        	<h1>ஆயி உமையானவளே ஆதி சிவன் தேவியரே<h1>         
+        </div>
+        <div>
+        	<h1 style="color:red; text-align:center";>NALLA MARK AMMAN</h1>
+        </div>         
+        {% block content %}
+
+        {% endblock %}
+    {% include 'footer.html' %}         
+    </div>
+</body>
+</html>

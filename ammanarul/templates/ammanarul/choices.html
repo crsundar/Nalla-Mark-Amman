@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}	    
+	<img src="{% static 'ammanarul/amman.jpg' %}" class="mx-auto d-block" width="270">
+	<div class="row">
+        <div class="col-lg-6 mx-auto">
+            <blockquote class="blockquote blockquote-custom bg-white p-5 shadow rounded">
+                <div class="blockquote-custom-icon bg-info shadow-sm"><i class="fa fa-quote-left text-white"></i></div>
+                <p class="mb-0 mt-2 font-italic">"What is Prayer?"<br>
+                "Prayer is the bridge between Aathman which is the Soul and Antharaathaman which is nothing but the Conscience. Nalla Mark Amman manifests herself in our Prayers to render the  inner bridge stronger and to grant the wishes that her devotees humbly desire."</p>
+                <footer class="blockquote-footer pt-4 mt-4 border-top">ஏரி காத்த கர்னல் சுந்தர்
+                </footer>
+            </blockquote>
+        </div><!--End Col-->
+    </div><!--End Row-->
+    <h5 style="text-align:center;">PRAYER CHOICES</h5>
+
+	<div class="columns">
+		<ul class="price">
+		    <li class="header" style="background-color:#ff6666">Premium</li>
+		    <li class="grey">Free for four weeks</li>
+		    <li>Choose a Prayer</li>
+		    <li>No approval required</li>
+		    <li>Only one per month</li>
+		    <li>On Prayer Board for 28 days</li>
+		    <li class="grey"><a href="{% url 'upload_premium' %}" class="button" style="background-color:#ff6666">Upload Premium Prayer</a></li>
+		</ul>
+	</div>
+
+	<div class="columns">
+		<ul class="price">
+		    <li class="header" style="background-color:#ff3333">Intense</li>
+		    <li class="grey">&#8377 100.00 for four weeks</li>
+		    <li>Write a Prayer upto 400 letters</li>
+		    <li>Approval required</li>
+		    <li>No limit</li>
+		    <li>On Prayer Board for 28 days</li>
+		    <li class="grey"><a href="{% url 'upload_intense' %}" class="button" style="background-color:#ff3333">Upload Intense Prayer</a></li>
+		</ul>
+	</div>
+
+	<div class="columns">
+		<ul class="price">
+		    <li class="header" style="background-color:#ff0000">Special</li>
+		    <li class="grey">&#8377 500.00 for four weeks</li>
+		    <li>Write a Prayer upto 1000 letters</li>
+		    <li>No approval required</li>
+		    <li>No limit</li>
+		    <li>On Prayer Board for 28 days</li>
+		    <li class="grey"><a href="{% url 'upload_special' %}" class="button" style="background-color:#ff0000">Upload Special Prayer</a></li>
+		</ul>
+	</div>
+	<h4 style="text-align:center;">Choose one of the above</h4>	
+{% endblock %}
